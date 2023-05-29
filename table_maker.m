@@ -1,4 +1,13 @@
 %% create yourself a table of all values from xfoil without breaking a sweat.
+% output_array is a cell array of structs. each entry in this array
+% represents a single airfoil. 
+%
+% Each struct has two fields:
+%   name:   char vector
+%   data:   Table with columns `alpha`, `Cl`, and `Cd`
+%
+% Recall how to use tables and structs.
+%   output_array{1}.data.Cl
 
 function [output_array] = table_maker(airfoil_names, xfoil_output)
     if (length(airfoil_names) ~= length(xfoil_output))
