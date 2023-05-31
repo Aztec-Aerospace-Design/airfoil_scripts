@@ -4,10 +4,10 @@
 %
 % Each struct has two fields:
 %   name:   char vector
-%   data:   Table with columns `alpha`, `Cl`, and `Cd`
+%   data:   Table with columns `alpha`, `cl`, `cd`, `cm`, and `l_to_d`.
 %
 % Recall how to use tables and structs.
-%   output_array{1}.data.Cl
+%   output_array{1}.data.cl
 
 function [output_array] = table_maker(airfoil_names, xfoil_output)
     if (length(airfoil_names) ~= length(xfoil_output))
@@ -23,7 +23,7 @@ function [output_array] = table_maker(airfoil_names, xfoil_output)
         foil_data = xfoil_output{i};
 
         foil_table = array2table(foil_data, 'VariableNames', ...
-            ["alpha", "Cl", "Cd"]);
+            ["alpha", "cl", "cd", "cm", "l_to_d"]);
 
         output_array{end + 1} = struct('name', airfoil_names{i}, ...
             'data', foil_table);
