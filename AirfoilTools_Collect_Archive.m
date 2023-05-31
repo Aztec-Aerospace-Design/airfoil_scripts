@@ -3,7 +3,7 @@
 %Uploaded 5-30-2023
 clear all; clear vars; clc;
 
-database = airfoiltools_collect_archive();  % Implementation example
+database = AirfoilTools_Collect_Archive();  % Implementation example
 
 function [database] = AirfoilTools_Collect_Archive()
     %INPUT:     nothing
