@@ -5,7 +5,7 @@ clear all; clear vars; clc;
 
 database = airfoiltools_collect_archive();  % Implementation example
 
-function [database] = airfoiltools_collect_archive()
+function [database] = AirfoilTools_Collect_Archive()
     %INPUT:     nothing
     %OUTPUT:    Matrix of strings
     URL = 'http://airfoiltools.com/search/airfoils';
